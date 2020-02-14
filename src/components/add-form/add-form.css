@@ -1,0 +1,114 @@
+.add-form__modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.add-form__form {
+  position: relative;
+  width: 500px;
+  max-height: max-content;
+  max-width: 100%;
+  border-radius: 3px;
+  /* margin-top: 5rem; */
+  padding: 20px;
+  background-color: #fff;
+}
+
+.add-form__close {
+  position: absolute;
+  font-size: 1.7rem;
+  top: .5rem;
+  right: .5rem;
+  padding: .3rem;
+  cursor: pointer;
+}
+
+.add-form__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.add-form__product {
+  display: flex;
+}
+
+.add-form__product-image-wrapper {
+  max-width: 80px;
+  margin-right: 10px;
+}
+
+.add-form__product-image {
+  max-width: inherit;
+}
+
+.add-from__product-name,
+.add-from__product-details {
+  margin-top: 0;
+}
+
+.add-from__product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: .7rem;
+}
+
+.add-from__quantity,
+.add-from__total {
+  font-weight: bold;
+}
+
+.add-from__quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+.add-from__total {
+  margin-top: 0;
+}
+
+.add-from__quantity .material-icons {
+  position: relative;
+  bottom: 1px;
+  cursor: pointer;
+}
+
+.add-from__quantity-value {
+  display: inline-block;
+  width: 50px;
+}
+
+.add-form__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-from__add {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: .3rem .5rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-from__add:hover {
+  border-color: #333;
+  background-color: #333;
+}
+
+.add-from__add:active {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
