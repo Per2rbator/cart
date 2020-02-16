@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Product from '../product'
 import { connect } from 'react-redux'
 import { withProductService } from '../hoc'
-import { fetchProducts } from '../../actions'
+import { fetchProducts, addProductToCart } from '../../actions'
 import Loader from '../loader'
 import AddForm from '../add-form'
 
@@ -64,7 +64,13 @@ class ProductList extends Component {
   }
 
   onAddToCart() {
-    console.log(this.state.form)
+    const { product, quantity, total } = this.state.form
+
+    this.props.addProductToCart({
+      product, quantity, total
+    })
+    
+    this.onCloseForm()
   }
 
   render() {
@@ -103,7 +109,8 @@ const mapStateToProps = ({ productsInfo: { products, loading, error } }) => (
 const mapDispatchToProps = (dispatch, { productService }) => {
   
   return{
-    fetchProducts: () => fetchProducts(dispatch, productService)
+    fetchProducts: () => fetchProducts(dispatch, productService),
+    addProductToCart: (product) => dispatch(addProductToCart(product))
   }
 }
 

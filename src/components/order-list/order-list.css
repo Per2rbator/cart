@@ -62,3 +62,16 @@
   color: #666699;
   border: 1px solid #666699;
 }
+
+.order-list__total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 2rem 0;
+}
+
+.order-list__total-value {
+  display: inline-block;
+  width: 115px;
+  text-align: left;
+}

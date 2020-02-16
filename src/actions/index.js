@@ -18,9 +18,24 @@ const fetchProducts = (dispatch, service) => {
     .catch(error => dispatch(productsLoadFail()))
 }
 
+const addProductToCart = productData => ({
+  type: 'ADD_PRODUCT_TO_CART',
+  payload: productData
+})
+
+const changeOrderProductQuantity = (productId, quantity) => {
+
+  return {
+    type: 'CHANGE_PRODUCT_QUANTITY',
+    payload: { productId, quantity }
+  }
+}
+
 export {
   startLoadingProducts,
   productsLoadedSuccessfuly,
   productsLoadFail,
-  fetchProducts
+  fetchProducts,
+  addProductToCart,
+  changeOrderProductQuantity
 }
