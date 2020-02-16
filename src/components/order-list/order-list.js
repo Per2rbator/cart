@@ -6,6 +6,8 @@ import './order-list.css'
 
 const OrderList = ({ orderItems, changeQuantity }) => {
 
+  console.log(orderItems)
+
   const orderList = orderItems.length ? orderItems.map((item, idx) => (
     <li className="order-list__order-item" key={ idx }>
       <div className="order-item__image-wrapper">
