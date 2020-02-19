@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import './header.css'
 
-const Header = ({ counter }) => {
+export const Header = ({ counter }) => {
 
   const cartIndicator = counter ?
     <span className="header__cart-counter">{ counter }</span> : null
@@ -29,3 +29,19 @@ const mapStateToProps = ({shoppingCart: { length }}) => ({
 })
 
 export default connect(mapStateToProps)(Header)
+
+
+    // "@testing-library/jest-dom": "^4.2.4",
+
+    // "jest": "24.9.0",
+    // "jest-enzyme": "^7.1.2",
+
+    // setupTests.js
+
+//     import Enzyme from 'enzyme'
+// import EnzymeAdapter from 'enzyme-adapter-react-16'
+
+// Enzyme.configure({
+//   adapter: new EnzymeAdapter(),
+//   disableLifecycleMethods: true
+// })

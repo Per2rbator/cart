@@ -8,7 +8,7 @@ import AddForm from '../add-form'
 
 import './product-list.css'
 
-class ProductList extends Component {
+export class ProductList extends Component {
 
   state = {
     form: {
@@ -109,7 +109,7 @@ const mapStateToProps = ({ productsInfo: { products, loading, error } }) => (
 const mapDispatchToProps = (dispatch, { productService }) => {
   
   return{
-    fetchProducts: () => fetchProducts(dispatch, productService),
+    fetchProducts: fetchProducts(dispatch, productService),
     addProductToCart: (product) => dispatch(addProductToCart(product))
   }
 }

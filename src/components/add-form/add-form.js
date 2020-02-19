@@ -24,7 +24,10 @@ const AddForm = ({ product, quantity, total,
 
         <div className="add-form__product">
           <div className="add-form__product-image-wrapper">
-            <img className="add-form__product-image" src={ product.imgURL } alt=""/>
+            <img
+              className="add-form__product-image"
+              src={ product.imgURL }
+              alt={  product.nam } />
           </div>
           <div className="add-form__product-description">
             <p className="add-from__product-name">{ product.name }</p>
@@ -36,8 +39,12 @@ const AddForm = ({ product, quantity, total,
           <span className="add-from__quantity-value">
             { quantity }
           </span>
-          <i className="material-icons" onClick={ () => onIncrease() }>add</i>
-          <i className="material-icons" onClick={ () => onDecrease() }>remove</i>
+          <button className="add-form__change-quantity" onClick={ () => onIncrease() }>
+            <i className="material-icons">add</i>
+          </button>
+          <button className="add-form__change-quantity" onClick={ () => onDecrease() }>
+            <i className="material-icons">remove</i>
+          </button>
         </p>
         <p className="add-from__total">
           Total: <span>{ total } &#8381;</span>

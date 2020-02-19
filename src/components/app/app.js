@@ -1,6 +1,5 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-
 import Header from '../header'
 import { HomePage, CartPage } from '../pages'
 

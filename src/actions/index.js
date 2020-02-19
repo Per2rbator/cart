@@ -11,7 +11,7 @@ const productsLoadFail = () => ({
   type: 'PRODUCTS_LOAD_FAIL'
 })
 
-const fetchProducts = (dispatch, service) => {
+const fetchProducts = (dispatch, service) => () => {
   dispatch(startLoadingProducts())
   service.getProducts()
     .then(products => dispatch(productsLoadedSuccessfuly(products)))
@@ -23,13 +23,10 @@ const addProductToCart = productData => ({
   payload: productData
 })
 
-const changeOrderProductQuantity = (productId, quantity) => {
-
-  return {
-    type: 'CHANGE_PRODUCT_QUANTITY',
-    payload: { productId, quantity }
-  }
-}
+const changeOrderProductQuantity = (productId, quantity) => ({
+  type: 'CHANGE_PRODUCT_QUANTITY',
+  payload: { productId, quantity }
+})
 
 export {
   startLoadingProducts,

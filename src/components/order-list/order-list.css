@@ -3,6 +3,7 @@
 }
 
 .order-list__heading  {
+  font-family: 'Lemonada', cursive;
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0;
@@ -42,10 +43,18 @@
   margin-bottom: .8rem;
 }
 
+.order-item__change-quantity {
+  height: 26px;
+  padding: 0;
+  margin-right: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .order-item__controls .material-icons {
   cursor: pointer;
   border-radius: 3px;
-  margin-right: 5px;
 }
 
 .order-item__add {

@@ -7,7 +7,7 @@ const Product = ({ id, name, imgURL, description, price, onProductAdded }) => {
   return (
     <div className="product">
       <div className="product__image-wrapper">
-        <img className="product__image" src={ imgURL } alt=""/>
+        <img className="product__image" src={ imgURL } alt={ name }/>
       </div>
 
       <div className="product__description">
